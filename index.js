@@ -104,7 +104,7 @@ function addAllDepartments() {
     .then((answer) => {
       db.query(
         "INSERT INTO department SET ?",
-        { name: answer.departmentName },
+        { departmentname: answer.departmentName },
         function (err, data) {
           if (err) throw err;
           console.log(`Added ${answer.departmentName} to the database.`);
